@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        Portfolio
+    </title>
+    <link rel="icon" type="image/x-icon"
+        href="https://tse1.mm.bing.net/th/id/OIP.uVpMxXWRZWVSI_IFdJ1GAgHaHa?w=201&h=201&c=7&r=0&o=5&dpr=1.5&pid=1.7">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <style>
+        nav {
+            display: flex;
+            width: 100%;
+            align-items: center;
+            flex-wrap: wrap;
+            padding: 30px 0 10px;
+            position: fixed;
+            opacity: 50%;
+            background-color: black;
+        }
+
+        nav ul {
+            flex: 1;
+            text-align: right;
+            padding-right: 40px;
+        }
+
+        nav ul li {
+            display: inline-block;
+            list-style: none;
+            margin: 10px 30px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            letter-spacing: 1px;
+            font-size: 17px;
+        }
+
+        nav ul li :hover {
+            color: #77aada;
+        }
+
+        #Home {
+            align-items: center;
+            justify-content: center;
+        }
+
+        #skillset {
+            align-items: center;
+            justify-content: center;
+            display: flex;
+        }
+
+        .column_left {
+            position: absolute;
+            left: 5%;
+            font-size: 24px;
+            color: #ffff;
+        }
+
+
+        .column_right {
+            margin: 0;
+            position: absolute;
+            right: 10%;
+        }
+
+        section {
+            padding-top: 0px;
+            width: 100%;
+            height: 600px;
+
+            display: flex;
+            flex-wrap: wrap;
+            margin: 0;
+
+        }
+
+        h1 {
+
+            font-size: 50px;
+        }
+
+        .home {
+            background-image: url('https://tse4.mm.bing.net/th/id/OIP.gvXkX14HxWdoty2gsiM3DQHaEK?w=309&h=180&c=7&r=0&o=5&dpr=1.5&pid=1.7');
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 700px;
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            vertical-align: middle;
+            color: rgb(218, 204, 209);
+        }
+
+
+        #About {
+            background-image: url('https://tse2.mm.bing.net/th/id/OIP.jmuJr6zdVFoS1YHhCr9y2wHaFj?w=247&h=185&c=7&r=0&o=5&dpr=1.5&pid=1.7');
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .about_me {
+            font-size: 30px;
+            color: #181825;
+
+        }
+
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            --webkit-font-smotthing: antialiased;
+        }
+
+        ul {
+            list-style-type: none;
+        }
+
+        li {
+            border: 2px solid dodgerblue;
+            padding: 0px;
+            margin: 0px;
+        }
+
+        a {
+            padding: 10px;
+            color: #3DCFD3;
+            font-size: 20px;
+
+        }
+
+        .wrapper {
+            width: 400px;
+            font-family: 'Roboto', sans-serif;
+            margin: 0 auto;
+        }
+
+        #Skills {
+            background-image: url('https://wallpapertag.com/wallpaper/full/b/b/2/116081-dark-grey-background-1920x1200-for-mac.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            color: #fff;
+
+        }
+
+        .skill {
+            margin-bottom: 35px;
+            position: relative;
+            overflow-x: hidden;
+
+        }
+
+        .skill>p {
+            font-size: 18px;
+            font-weight: 700;
+            color: #fff;
+            margin: 0;
+        }
+
+        .skill:before {
+            width: 100%;
+            height: 5px;
+            content: "";
+            display: block;
+            position: absolute;
+            background: #959595;
+            bottom: 0;
+        }
+
+        .skill-bar {
+            width: 100%;
+            height: 5px;
+            background: #77aada;
+            display: block;
+            position: relative;
+        }
+
+        .skill-bar span {
+            position: absolute;
+            border-top: 5px solid #77aada;
+            color: #fff;
+            top: -30px;
+            padding: 0;
+            font-size: 18px;
+            padding: 3px 0;
+            font-weight: 500;
+        }
+
+        /* SKILL 1 */
+        .skill1 {
+            width: 80%;
+
+        }
+
+
+
+        .skill1 .skill-count1 {
+            right: 0;
+        }
+
+        /* SKILL 2 */
+        .skill2 {
+            width: 60%;
+        }
+
+        .skill2 .skill-count2 {
+            right: 0;
+        }
+
+        /* SKILL 3 */
+        .skill3 {
+            width: 70%;
+        }
+
+        .skill3 .skill-count3 {
+            right: 0;
+        }
+
+        /* SKILL 4 */
+        .skill4 {
+            width: 90%
+        }
+
+        .skill4 .skill-count4 {
+            right: 0;
+        }
+
+        /* SKILL 5 */
+        .skill5 {
+            width: 80%;
+        }
+
+        .skill5 .skill-count5 {
+            right: 0;
+        }
+
+        /* SKILL 6 */
+        .skill6 {
+            width: 90%
+        }
+
+        .skill6 .skill-count6 {
+            right: 0;
+        }
+
+        .how-title {
+            text-align: center;
+            color: #ffff;
+        }
+
+        input[type=text],
+        select,
+        textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            margin-top: 6px;
+            opacity: 50%;
+            margin-bottom: 16px;
+            resize: vertical;
+        }
+
+        input[type=submit] {
+            background-color: #77aada;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            cursor: pointer;
+        }
+
+        input[type=submit]:hover {
+            background-color: #77aada;
+        }
+
+        /* Style the container/contact section */
+
+
+        /* Create two columns that float next to eachother */
+        .column {
+            float: left;
+            width: 50%;
+            margin-top: 6px;
+            padding: 20px;
+        }
+
+        /* Clear floats after the columns */
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        #Contact {
+            background-image: url('https://tse2.mm.bing.net/th/id/OIP.NsdVBJIxoGbh9B3qmxygOAHaEK?w=279&h=180&c=7&r=0&o=5&dpr=1.5&pid=1.7');
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        #footer {
+            background-image: url('https://wallpapercave.com/wp/kqvP4Hn.png');
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .phone {
+            text-align: right;
+            padding-right: 40px;
+        }
+
+        .fa {
+            padding: 20px;
+            font-size: 30px;
+            width: 15px;
+            height: 15px;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 30%;
+        }
+
+        .fa:hover {
+            opacity: 0.7;
+        }
+
+        /* Set a specific color for each brand */
+
+        /* Facebook */
+        .fa-facebook {
+            background: #000;
+            color: white;
+        }
+
+        /* Twitter */
+        .fa-twitter {
+            background: #57bfe1;
+            color: white;
+        }
+
+        .fieldset1 {
+            float: left;
+            border: 0px #57bfe1;
+            -moz-border-radius: 8px;
+            -webkit-border-radius: 8px;
+            border-radius: 8px;
+            padding-top: 20px;
+            padding-right: 25 px;
+            padding-bottom: 20px;
+            padding-left: 25px;
+            text-align: justify;
+
+        }
+    </style>
+
+</head>
+
+</html>
+
+<body>
+    <div class="home">
+        <div class="navbar">
+            <nav>
+                <ul>
+                    <li><a href="#Home" class="N3-bar-item">Home</a></li>
+                    <li><a href="#About" class="N3-bar-item">About</a></li>
+                    <li><a href="#Skills" class="N3-bar-item">Skills</a></li>
+                    <li><a href="#Contact" class="N3-bar-item">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+        <section id="Home">
+            <h1>Hello,I'm J.Jaswanth</h1>
+
+            <div class="textbox">
+                <br><br><br><br>
+                <p><span class="autoinput"></span></p>
+            </div>
+            <!--JAVA SCRIPT-->
+            <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+            <script>
+                var type = new Typed(".autoinput", {
+                    strings: ["Student!", "Coder!", " Web Developer!"],
+                    typeSpeed: 100,
+                    backSpeed: 100,
+                    loop: true
+                })
+            </script>
+        </section>
+    </div>
+
+
+    <section id="About">
+        <h1> About me</h1>
+        <div class="about_me">
+            I'm Jaswanth and I'm a Student
+            I'm pursuing my btech 1st year in VIT-AP university.I have knowledge in python.At present I am a beginner in
+            HTML and CSS
+        </div>
+    </section>
+
+    <section id="Skills">
+        <h1> Skills</h1>
+
+        <div id=skillset>
+            <div class=column_left>
+
+                <br>
+                As a fresher, these are my current skills. I am still working<br> on few other skills.
+            </div>
+            <div class=column_right>
+                <div class="wrapper">
+                    <h2 class="how-title">Skill bar</h2>
+                    <br><br>
+                    <div class="skill">
+                        <p>HTML5</p>
+                        <div class="skill-bar skill1 wow slideInLeft animated">
+                            <span class="skill-count1">80%</span>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <p>CSS</p>
+                        <div class="skill-bar skill2 wow slideInLeft animated">
+                            <span class="skill-count2">60%</span>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <p>PYTHON</p>
+                        <div class="skill-bar skill3 wow slideInLeft animated">
+                            <span class="skill-count3">70%</span>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <p>C</p>
+                        <div class="skill-bar skill4 wow slideInLeft animated">
+                            <span class="skill-count4">90%</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="Contact" class="contact">
+        <div class="container">
+
+            <h2>Contact Us</h2>
+            <div class="row">
+                <div class="column">
+                    <form action="/action_page.php">
+                        <label for="fname">First Name</label>
+                        <input type="text" id="fname" name="firstname" placeholder="Your name..">
+                        <label for="lname">Last Name</label>
+                        <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+                        <label for="country">Country</label>
+                        <select id="country" name="country">
+                            <option value="India">India</option>
+                        </select>
+                        <label for="subject">Subject</label>
+                        <textarea id="subject" name="subject" placeholder="Write something.."
+                            style="height:170px"></textarea>
+                        <input type="submit" value="Submit">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div id="footer">
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+        <div class="fieldset1">
+            <div class="column_left">
+
+                <br><br><br>
+                <a href="#" class="fa fa-facebook"></a>
+                <a href="#" class="fa fa-twitter"></a>
+            </div>
+        </div>
+
+
+
+        <div class="column_right">
+            <font size="6">&#9743</font>
+            <font size="5">&nbsp1234567890<br>Give us a call</font><br><br>
+            <font size="10"><i class="material-icons">place</i></font>
+            <font size="5">&nbspGuntur<br>&nbsp&nbsp&nbspAP</font><br>
+        </div>
+
+    </div>
+
+</body>
+
+</html>
